@@ -6,9 +6,18 @@ import java.util.Random;
 
 public class RandomArrayOfSHapes {
     public static void main(String[] args) {
+        List<Shape> listOfShapes = createRandomListOfShapes();
+
+        for (Shape shape : listOfShapes) {
+            System.out.println(shape.toString());
+        }
+    }
+
+    public static List<Shape> createRandomListOfShapes() {
         Random random = new Random();
 
         List<Shape> listOfShapes = new ArrayList<Shape>();
+
         int numberOfShapes = random.nextInt(10) + 3;
 
         for (int i = 0; i < numberOfShapes; i++) {
@@ -34,9 +43,7 @@ public class RandomArrayOfSHapes {
             }
         }
 
-        for (Shape shape : listOfShapes) {
-            System.out.println(shape.toString());
-        }
+        return listOfShapes;
     }
 
     public static Colour getRandomColour() {
