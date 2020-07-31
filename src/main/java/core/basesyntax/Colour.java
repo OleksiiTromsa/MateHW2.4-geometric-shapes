@@ -8,13 +8,13 @@ public enum Colour {
     BLUE("синий"),
     VIOLET("фиолетовый");
 
-    private String translation;
+    private String value;
 
-    Colour(String translation) {
-        this.translation = translation;
+    Colour(String value) {
+        this.value = value;
     }
 
-    public String getTranslation() {
-        return translation;
+    public String getValue() {
+        return value;
     }
 }
